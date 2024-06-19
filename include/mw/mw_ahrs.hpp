@@ -61,8 +61,8 @@ namespace ntrex
 
     private:
         bool publish_tf_;
-        std::string parent_frame_id_;
-        std::string frame_id_;
+        const std::string parent_frame_id_ = "base_link";
+        const std::string frame_id_ = "imu_link";
         std::mutex _lockAHRS;
 
     public:
